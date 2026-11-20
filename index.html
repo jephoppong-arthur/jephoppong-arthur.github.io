@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jephthah Oppong-Arthur | Economist</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #ffffff;
+            color: #333333;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        /* Navigation bar */
+
+        header {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+            padding: 22px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .site-name {
+            font-size: 21px;
+            font-weight: bold;
+            color: #142d4e;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333333;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #245788;
+        }
+
+        /* Main website layout */
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 65px;
+        }
+
+        /* Profile sidebar */
+
+        .profile-photo {
+            width: 220px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .photo-placeholder {
+            width: 220px;
+            height: 260px;
+            background: #f2f4f6;
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777777;
+        }
+
+        .sidebar h2 {
+            font-size: 23px;
+            line-height: 1.3;
+            color: #142d4e;
+            margin-bottom: 10px;
+        }
+
+        .sidebar p {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-top: 5px;
+        }
+
+        .profile-links a {
+            display: block;
+            margin: 10px 0;
+            font-size: 15px;
+        }
+
+        /* Main content */
+
+        h1 {
+            color: #142d4e;
+            font-size: 34px;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #142d4e;
+            font-size: 24px;
+            margin-top: 30px;
+        }
+
+        a {
+            color: #245788;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .paper-title {
+            color: #245788;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .research-item {
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #e0e0e0;
+            margin: 30px 0;
+        }
+
+        footer {
+            border-top: 1px solid #dddddd;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+            color: #777777;
+            margin-top: 60px;
+        }
+
+        /* Mobile-friendly layout */
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .photo-placeholder,
+            .profile-photo {
+                margin: auto;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="site-name">
+            Jephthah Oppong-Arthur
+        </div>
+
+        <div class="navigation">
+            <a href="index.html">Home</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#cv">CV</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+
+    <!-- Profile sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="photo-placeholder">
+            Professional Photo
+        </div>
+
+        <h2>Jephthah Oppong-Arthur</h2>
+
+        <p>
+            Ph.D. Candidate in Economics<br>
+            School of Economic Sciences<br>
+            Washington State University
+        </p>
+
+        <p>Pullman, Washington, USA</p>
+
+        <hr>
+
+        <div class="profile-links">
+            <a href="#contact">Email</a>
+            <a href="#cv">Curriculum Vitae</a>
+        </div>
+
+    </aside>
+
+    <!-- Main content -->
+
+    <main>
+
+        <section id="about">
+
+            <h1>About Me</h1>
+
+            <p>
+                Welcome! I am a Ph.D. candidate in Economics
+                at the School of Economic Sciences,
+                Washington State University.
+                I hold an M.S. in Statistics and an M.A.
+                in Economics from the University of Akron.
+            </p>
+
+            <p>
+                My research integrates economic theory,
+                applied econometrics, artificial intelligence,
+                and mathematical optimization to address
+                challenges in energy markets and the
+                transition toward sustainable, efficient,
+                and resilient energy systems.
+            </p>
+
+            <h2>Research Interests</h2>
+
+            <p>
+                Energy Economics, Environmental Economics,
+                Applied Econometrics, Computational Economics,
+                and Data Science.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section id="research">
+
+            <h2>Job Market Paper</h2>
+
+            <div class="research-item">
+
+                <div class="paper-title">
+                    Designing a Self-sufficient Community
+                    Microgrid: An AI-Agent-Based Energy
+                    Trading Framework with Integrated Storage
+                </div>
+
+                <p>
+                    This research develops an autonomous
+                    agent-based electricity trading framework
+                    that integrates distributed renewable
+                    generation, battery storage optimization,
+                    and decentralized household decision-making
+                    to promote economically efficient and
+                    resilient community microgrids.
+                </p>
+
+            </div>
+
+            <h2>Research in Progress</h2>
+
+            <div class="research-item">
+                <div class="paper-title">
+                    Data Centers and Electricity Prices
+                </div>
+            </div>
+
+            <div class="research-item">
+                <div class="paper-title">
+                    The Effect of Temperature on Electric
+                    Vehicle Charging Infrastructure and Adoption
+                </div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section id="teaching">
+
+            <h2>Teaching</h2>
+
+            <p>
+                My teaching experience spans economics,
+                statistics, data science, and business analytics.
+                I emphasize statistical intuition, economic
+                reasoning, and practical applications of
+                computational methods.
+            </p>
+
+            <strong>Selected Courses</strong>
+
+            <ul>
+                <li>Money and Banking</li>
+                <li>Fundamentals of Macroeconomics</li>
+                <li>Fundamentals of Microeconomics</li>
+                <li>Applied Data Mining</li>
+                <li>Business Analytics</li>
+                <li>Statistics for Everyday Life</li>
+            </ul>
+
+        </section>
+
+        <hr>
+
+        <section id="presentations">
+
+            <h2>Conference Presentations</h2>
+
+            <p>
+                <strong>43rd USAEE North American Conference</strong>
+                <br>
+                November 2026 — Podium and Poster Presentations.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <section id="cv">
+
+            <h2>Curriculum Vitae</h2>
+
+            <p>CV will be available shortly.</p>
+
+        </section>
+
+        <hr>
+
+        <section id="contact">
+
+            <h2>Contact</h2>
+
+            <p>
+                School of Economic Sciences<br>
+                Washington State University<br>
+                Pullman, Washington, USA
+            </p>
+
+            <p>Email: To be added.</p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<footer>
+    Copyright &copy; 2026 Jephthah Oppong-Arthur.
+    All rights reserved.
+</footer>
+
+</body>
+</html>
