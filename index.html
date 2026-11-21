@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Jephthah Oppong-Arthur is a Ph.D. student in Economics at Washington State University, specializing in energy economics, applied industrial organization, econometrics, and financial economics.">
+          content="Jephthah Oppong-Arthur is a Ph.D. Candidate in Economics at Washington State University, specializing in energy economics, financial economics, applied industrial organization, and computational economics.">
 
     <title>Jephthah Oppong-Arthur | Energy and Financial Economist</title>
 
     <style>
+        /* General styling */
+
         * {
             box-sizing: border-box;
         }
@@ -22,12 +24,11 @@
 
         body {
             margin: 0;
-            padding: 0;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 17px;
             line-height: 1.8;
             color: #333333;
-            background-color: #ffffff;
+            background: #ffffff;
         }
 
         a {
@@ -39,11 +40,16 @@
             text-decoration: underline;
         }
 
+        a:focus-visible {
+            outline: 2px solid #245788;
+            outline-offset: 4px;
+        }
+
         /* Navigation */
 
         header {
+            background: #ffffff;
             border-bottom: 1px solid #e5e5e5;
-            background-color: #ffffff;
         }
 
         nav {
@@ -72,6 +78,7 @@
         .nav-links a {
             color: #333333;
             font-size: 15px;
+            font-weight: 500;
         }
 
         .nav-links a:hover {
@@ -95,33 +102,19 @@
             font-size: 15px;
         }
 
-        .photo-placeholder {
-            width: 220px;
-            height: 260px;
-            max-width: 100%;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #777777;
-            margin-bottom: 20px;
-            border-radius: 4px;
-        }
-
         .profile-photo {
+            display: block;
             width: 220px;
-            height: 260px;
             max-width: 100%;
-            object-fit: cover;
-            border-radius: 4px;
+            height: auto;
+            border-radius: 5px;
             margin-bottom: 20px;
         }
 
         .sidebar h2 {
             font-size: 21px;
             color: #142d4e;
-            margin: 0 0 8px 0;
+            margin: 0 0 8px;
             line-height: 1.4;
         }
 
@@ -133,11 +126,12 @@
             margin-top: 20px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
         }
 
         .profile-links a {
             display: block;
+            font-size: 15px;
         }
 
         /* Main content */
@@ -186,11 +180,19 @@
         }
 
         .research-item {
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
 
         .research-item p {
             margin-top: 8px;
+        }
+
+        .conference-item {
+            margin-bottom: 25px;
+        }
+
+        .conference-item p {
+            margin-bottom: 5px;
         }
 
         ul {
@@ -207,9 +209,22 @@
             margin: 35px 0;
         }
 
-        .section-label {
+        /* CV button */
+
+        .cv-button {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #142d4e;
+            color: #ffffff;
+            border-radius: 4px;
+            font-size: 15px;
             font-weight: bold;
-            color: #142d4e;
+        }
+
+        .cv-button:hover {
+            background: #245788;
+            color: #ffffff;
+            text-decoration: none;
         }
 
         /* Footer */
@@ -225,7 +240,6 @@
         /* Mobile responsiveness */
 
         @media (max-width: 768px) {
-
             nav {
                 flex-direction: column;
                 align-items: flex-start;
@@ -255,6 +269,16 @@
             h2 {
                 font-size: 22px;
             }
+
+            .profile-photo {
+                width: 200px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
         }
     </style>
 </head>
@@ -264,7 +288,7 @@
     <!-- Navigation -->
 
     <header>
-        <nav>
+        <nav aria-label="Main navigation">
 
             <div class="nav-name">
                 Jephthah Oppong-Arthur
@@ -274,14 +298,15 @@
                 <a href="#home">Home</a>
                 <a href="#research">Research</a>
                 <a href="#teaching">Teaching</a>
-                <a href="files/CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+                <a href="#presentations">Presentations</a>
+                <a href="#cv">CV</a>
                 <a href="#contact">Contact</a>
             </div>
 
         </nav>
     </header>
 
-    <!-- Main page layout -->
+    <!-- Main layout -->
 
     <div class="container">
 
@@ -289,28 +314,24 @@
 
         <aside class="sidebar">
 
-            <!-- Replace with your photo after uploading images/profile.jpg -->
+            <!-- Correct photograph location -->
 
             <img
-                src="files/Headshot.jpg"
-                alt="Jephthah Oppong-Arthur"
+                src="images/Headshot.jpg"
+                alt="Professional photograph of Jephthah Oppong-Arthur"
                 class="profile-photo"
             >
 
             <h2>Jephthah Oppong-Arthur</h2>
 
-            <p>
-                Ph.D. Student in Economics
-            </p>
+            <p>Ph.D. Candidate in Economics</p>
 
             <p>
                 School of Economic Sciences<br>
                 Washington State University
             </p>
 
-            <p>
-                Pullman, Washington, USA
-            </p>
+            <p>Pullman, Washington, USA</p>
 
             <hr>
 
@@ -320,15 +341,17 @@
                     Email
                 </a>
 
-                <a href="https://www.linkedin.com/in/jephthah-oppong-arthur-34a053156/"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://www.linkedin.com/in/jephthah-oppong-arthur-34a053156/"
+                    target="_blank"
+                    rel="noopener noreferrer">
                     LinkedIn
                 </a>
 
-                <a href="files/CV.pdf"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="files/Curriculum_Vitae.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer">
                     Download CV
                 </a>
 
@@ -348,7 +371,8 @@
 
                 <p>
                     I am a Ph.D. Candidate in Economics at
-                    Washington State University, currently on the job market.
+                    Washington State University, currently
+                    on the academic job market.
                 </p>
 
                 <p>
@@ -360,13 +384,13 @@
                 </p>
 
                 <h2>Research Interests</h2>
-                
+
                 <p>
                     <strong>Research Fields:</strong>
                     Energy Economics, Financial Economics,
                     and Applied Industrial Organization.
                 </p>
-                
+
                 <p>
                     <strong>Research Methods:</strong>
                     Applied Econometrics, Computational Economics,
@@ -394,19 +418,20 @@
                     </div>
 
                     <p>
-                        This research develops a decentralized electricity
-                        trading framework for community microgrids that
-                        integrates distributed solar generation, battery
-                        energy storage, household optimization, and
-                        iterative auction-based price discovery.
+                        This research develops a decentralized
+                        electricity trading framework for
+                        community microgrids that integrates
+                        distributed solar generation, battery
+                        energy storage, household optimization,
+                        and iterative auction-based price discovery.
                     </p>
 
                     <p>
-                        The framework examines how coordinated local
-                        electricity trading and energy storage can
-                        improve economic efficiency, support renewable
-                        energy integration, and strengthen community
-                        energy resilience.
+                        The framework examines how coordinated
+                        local electricity trading and energy
+                        storage can improve economic efficiency,
+                        support renewable energy integration,
+                        and strengthen community energy resilience.
                     </p>
 
                 </div>
@@ -420,11 +445,11 @@
                     </div>
 
                     <p>
-                        This project investigates the effects of
-                        data center development on electricity prices,
-                        using applied econometric methods to examine
-                        how growing electricity demand affects
-                        local energy markets.
+                        This project investigates the effects
+                        of data center development on electricity
+                        prices, using applied econometric methods
+                        to examine how growing electricity demand
+                        affects local energy markets.
                     </p>
 
                 </div>
@@ -432,14 +457,15 @@
                 <div class="research-item">
 
                     <div class="paper-title">
-                        The Effect of Temperature on Electric Vehicle
-                        Charging Infrastructure and Adoption
+                        The Effect of Temperature on Electric
+                        Vehicle Charging Infrastructure and Adoption
                     </div>
 
                     <p>
-                        This research examines the relationship between
-                        temperature, electric vehicle charging
-                        infrastructure, and electric vehicle adoption.
+                        This research examines the relationship
+                        between temperature, electric vehicle
+                        charging infrastructure, and electric
+                        vehicle adoption.
                     </p>
 
                 </div>
@@ -455,17 +481,18 @@
                 <h2>Teaching</h2>
 
                 <p>
-                    My teaching experience spans economics, statistics,
-                    data science, and business analytics.
-                    I emphasize economic reasoning, statistical intuition,
-                    and practical applications of econometrics
-                    and machine learning methods.
+                    My teaching experience spans economics,
+                    statistics, data science, and business analytics.
+                    I emphasize economic reasoning, statistical
+                    intuition, and practical applications of
+                    econometrics and machine learning methods.
                 </p>
 
-                <h3>Selected Courses Taught as Lead Instructor</h3>
+                <h3>
+                    Selected Courses Taught as Lead Instructor
+                </h3>
 
                 <ul>
-
                     <li>
                         Intermediate Macroeconomic Analysis —
                         Spring 2026
@@ -500,7 +527,6 @@
                         Applied Data Mining —
                         Spring 2019, Spring 2020 &amp; Spring 2021
                     </li>
-
                 </ul>
 
             </section>
@@ -513,7 +539,7 @@
 
                 <h2>Conference Presentations</h2>
 
-                <div class="research-item">
+                <div class="conference-item">
 
                     <p>
                         <strong>
@@ -521,27 +547,24 @@
                         </strong>
                     </p>
 
-                    <p>
-                        November 2026
-                    </p>
+                    <p>November 2026</p>
+
+                    <p>Podium and Poster Presentations</p>
+
+                </div>
+
+                <div class="conference-item">
 
                     <p>
-                        Podium and Poster Presentations
-                    </p>
-
-                     <p>
                         <strong>
-                            66th International Meeting of the Transportation Research Forum
+                            66th International Meeting of the
+                            Transportation Research Forum
                         </strong>
                     </p>
 
-                    <p>
-                        April 2025
-                    </p>
+                    <p>April 2025</p>
 
-                    <p>
-                        Podium Presentation
-                    </p>
+                    <p>Podium Presentation</p>
 
                 </div>
 
@@ -556,14 +579,16 @@
                 <h2>Curriculum Vitae</h2>
 
                 <p>
-                    My academic curriculum vitae is available
-                    for download.
+                    My academic curriculum vitae is
+                    available for download.
                 </p>
 
                 <p>
-                    <a href="files/Curriculum_Vitae.pdf"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a
+                        href="files/Curriculum_Vitae.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="cv-button">
                         Download Curriculum Vitae (PDF)
                     </a>
                 </p>
@@ -594,9 +619,10 @@
 
                 <p>
                     <strong>LinkedIn:</strong>
-                    <a href="https://www.linkedin.com/in/jephthah-oppong-arthur-34a053156/"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a
+                        href="https://www.linkedin.com/in/jephthah-oppong-arthur-34a053156/"
+                        target="_blank"
+                        rel="noopener noreferrer">
                         Jephthah Oppong-Arthur
                     </a>
                 </p>
